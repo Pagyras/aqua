@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="ru">
+{% include "partials/head.njk" %}
+<body>
+  {% include "partials/header.njk" %}
+  {{ content | safe }}
+  {% include "partials/footer.njk" %}
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

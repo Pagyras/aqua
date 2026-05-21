@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>О компании — АкваЭкоСток</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="АкваЭкоСток — на главную">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <span class="brand-title">ООО «АкваЭкоСток»</span>
+        <span class="brand-subtitle">Производство и поставка очистных сооружений</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Основное меню">
+      <a class="nav-linkindex.html#services">Услуги</a>
+      <a class="nav-linkindex.html#workflow">Как работаем</a>
+      <a class="nav-link is-active{% endif %}" href="about.html">О компании</a>
+      <a class="nav-link" href="{% if pageName == 'home' %}#contacts">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="phone-chip" href="tel:+78352602802"><span class="phone-dot"></span>+7 (8352) 602-802</a>
+      <a class="btn-primary" href="index.html#request">Оставить заявку</a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-clip">
+      <div class="mobile-menu-inner">
+        <div class="mobile-panel">
+          <a class="mobile-link" href="product.html">Продукция</a>
+          <a class="mobile-link" href="index.html#services">Услуги</a>
+          <a class="mobile-link" href="projects.html">Проекты</a>
+          <a class="mobile-link" href="index.html#workflow">Как работаем</a>
+          <a class="mobile-link" href="about.html">О компании</a>
+          <a class="mobile-link" href="index.html#contacts">Контакты</a>
+
+          <div class="mobile-contact">
+            <span>Связаться с нами</span>
+            <a href="tel:+78352602802">+7 (8352) 602-802</a>
+            <a href="mailto:akvaekostok@yandex.ru">akvaekostok@yandex.ru</a>
+            <a class="btn-primary" href="index.html#request">Получить расчёт</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+    <section class="page-hero">
+      <div class="section-shell">
+        <div class="breadcrumbs"><a href="index.html">Главная</a><span>/</span><span>О компании</span></div>
+        <div class="page-hero-inner">
+          <div>
+            <span class="section-kicker">О компании</span>
+            <h1>АкваЭкоСток — инженерные решения для очистки и перекачки сточных вод</h1>
+            <p>Производим и поставляем оборудование для очистки сточных вод, перекачки, накопления и автоматизации инженерных систем.</p>
+          </div>
+          <div class="hero-info-card">
+            <strong>Работаем с объектами</strong>
+            <span>Промышленные, коммерческие, жилые и муниципальные объекты. Подбираем решение под реальные условия площадки.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-intro-section">
+      <div class="section-shell">
+        <div class="about-intro-layout">
+          <div class="about-text-card">
+            <span class="section-kicker">Кто мы</span>
+            <h2>Подбираем оборудование не по шаблону, а под задачу объекта</h2>
+            <p>АкваЭкоСток занимается подбором, производством, комплектацией и поставкой инженерного оборудования. В работе учитываем исходные данные проекта: расход, глубину, состав стоков, условия монтажа и требования к эксплуатации.</p>
+            <p>Если у заказчика нет полного ТЗ, помогаем понять, какие данные нужны для расчёта и подбора оборудования.</p>
+          </div>
+
+          <div class="facts-grid">
+            <div class="fact-card"><strong>КНС</strong><span>канализационные насосные станции</span></div>
+            <div class="fact-card"><strong>ЛОС</strong><span>ливневые и бытовые очистные сооружения</span></div>
+            <div class="fact-card"><strong>Ёмкости</strong><span>колодцы, резервуары и накопители</span></div>
+            <div class="fact-card"><strong>АСУ</strong><span>шкафы управления и автоматика</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <div class="section-shell">
+        <div class="work-head">
+          <div>
+            <span class="section-kicker">Что делаем</span>
+            <h2>Сопровождаем проект от подбора до запуска</h2>
+          </div>
+          <p>Можно обратиться за отдельным этапом или за полным циклом: от расчёта и комплектации до поставки, монтажа и пусконаладки.</p>
+        </div>
+
+        <div class="work-grid">
+          <div class="work-card"><span>01</span><h3>Подбор оборудования</h3><p>Смотрим исходные данные, требования проекта и условия площадки.</p></div>
+          <div class="work-card"><span>02</span><h3>Производство и комплектация</h3><p>Формируем состав оборудования, автоматики и комплектующих.</p></div>
+          <div class="work-card"><span>03</span><h3>Поставка на объект</h3><p>Организуем отгрузку и доставку оборудования до площадки.</p></div>
+          <div class="work-card"><span>04</span><h3>Монтаж и шефмонтаж</h3><p>Сопровождаем установку и контролируем ключевые этапы.</p></div>
+          <div class="work-card"><span>05</span><h3>Пусконаладка</h3><p>Помогаем запустить систему и проверить работу оборудования.</p></div>
+          <div class="work-card"><span>06</span><h3>Сервисная поддержка</h3><p>Консультируем по эксплуатации и дальнейшему обслуживанию.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-section">
+      <div class="section-shell">
+        <div class="photo-layout">
+          <div class="photo-intro">
+            <span class="section-kicker">Реальные работы</span>
+            <h2>Фото с производства, доставки и монтажа</h2>
+            <p>На сайте используем реальные кадры с объектов и производственных этапов: изготовление, комплектация, отгрузка, монтаж и установленное оборудование.</p>
+          </div>
+
+          <div class="photo-gallery">
+            <a class="photo-tile photo-tile-large" href="projects.html"><img src="assets/img/projects/photo_15_2026-05-21_17-21-54.jpg" alt="Производство оборудования"><span>Производство оборудования</span></a>
+            <a class="photo-tile photo-tile-small" href="projects.html"><img src="assets/img/projects/photo_6_2026-05-21_17-21-54.jpg" alt="Доставка оборудования"><span>Доставка</span></a>
+            <a class="photo-tile photo-tile-small" href="projects.html"><img src="assets/img/projects/photo_18_2026-05-21_17-21-54.jpg" alt="Монтаж оборудования"><span>Монтаж</span></a>
+            <a class="photo-tile photo-tile-small" href="projects.html"><img src="assets/img/projects/photo_24_2026-05-21_17-21-54.jpg" alt="Шкаф управления"><span>Автоматика</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-section">
+      <div class="section-shell">
+        <div class="approach-panel">
+          <div class="approach-intro">
+            <span class="section-kicker">Подход</span>
+            <h2>Сначала исходные данные, потом решение</h2>
+            <p>Мы не подбираем оборудование вслепую. Для корректного расчёта важны расход, отметки труб, глубина заложения, состав стоков, условия монтажа и требования проекта.</p>
+          </div>
+          <div class="approach-grid">
+            <div class="approach-card"><span>01</span><strong>ТЗ и исходные данные</strong></div>
+            <div class="approach-card"><span>02</span><strong>Расчёт и подбор</strong></div>
+            <div class="approach-card"><span>03</span><strong>Комплектация под объект</strong></div>
+            <div class="approach-card"><span>04</span><strong>Сопровождение запуска</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts-section">
+      <div class="section-shell">
+        <div class="contacts-panel">
+          <div class="contacts-info">
+            <span class="section-kicker">География и контакты</span>
+            <h2>Работаем с поставками по России</h2>
+            <p>Офис компании находится в Чебоксарах. Оборудование подбирается и поставляется под задачи объектов в разных регионах.</p>
+          </div>
+          <div class="contacts-list">
+            <div class="contacts-item"><span>Телефон</span><a href="tel:+78352602802">+7 (8352) 602-802</a></div>
+            <div class="contacts-item"><span>Email</span><a href="mailto:akvaekostok@yandex.ru">akvaekostok@yandex.ru</a></div>
+            <div class="contacts-item"><span>Адрес</span><strong>г. Чебоксары, ул. Хузангая, 14, офис 504</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="request">
+      <div class="section-shell">
+        <div class="cta-panel">
+          <div>
+            <h2>Хотите подобрать оборудование под объект?</h2>
+            <p>Пришлите ТЗ, проект или краткое описание задачи. Подскажем, какие данные нужны, и подготовим расчёт.</p>
+          </div>
+          <a class="btn-primary" href="index.html#request">Получить расчёт</a>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer" id="contacts">
+  <div class="footer-shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="index.html" aria-label="АкваЭкоСток — на главную">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span><strong>ООО «АкваЭкоСток»</strong><small>Производство и поставка очистных сооружений</small></span>
+        </a>
+        <p>Производим и поставляем оборудование для очистки сточных вод, перекачки, накопления и автоматизации инженерных систем.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Меню</h3>
+        <nav class="footer-links" aria-label="Меню в футере">
+          <a href="product.html">Продукция</a>
+          <a href="index.html#services">Услуги</a>
+          <a href="projects.html">Проекты</a>
+          <a href="index.html#workflow">Как работаем</a>
+          <a href="index.html#request">Заявка</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h3>Контакты</h3>
+        <div class="footer-contact-card">
+          <div class="footer-contact-item"><span>Телефон</span><a href="tel:+78352602802">+7 (8352) 602-802</a></div>
+          <div class="footer-contact-item"><span>Email</span><a href="mailto:akvaekostok@yandex.ru">akvaekostok@yandex.ru</a></div>
+          <div class="footer-contact-item"><span>Адрес</span><p>г. Чебоксары, ул. Хузангая, 14, офис 504</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 АкваЭкоСток. Все права защищены.</span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

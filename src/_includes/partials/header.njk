@@ -1,0 +1,50 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="АкваЭкоСток — на главную">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <span class="brand-title">ООО «АкваЭкоСток»</span>
+        <span class="brand-subtitle">Производство и поставка очистных сооружений</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Основное меню">
+      <a class="nav-link{% if pageName == 'product' %} is-active{% endif %}" href="product.html">Продукция</a>
+      <a class="nav-link" href="{% if pageName == 'home' %}#services{% else %}index.html#services{% endif %}">Услуги</a>
+      <a class="nav-link{% if pageName == 'projects' %} is-active{% endif %}" href="projects.html">Проекты</a>
+      <a class="nav-link" href="{% if pageName == 'home' %}#workflow{% else %}index.html#workflow{% endif %}">Как работаем</a>
+      <a class="nav-link{% if pageName == 'about' %} is-active{% endif %}" href="about.html">О компании</a>
+      <a class="nav-link" href="{% if pageName == 'home' %}#contacts{% else %}index.html#contacts{% endif %}">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="phone-chip" href="tel:+78352602802"><span class="phone-dot"></span>+7 (8352) 602-802</a>
+      <a class="btn-primary" href="{% if pageName == 'home' %}#request{% else %}index.html#request{% endif %}">Оставить заявку</a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-clip">
+      <div class="mobile-menu-inner">
+        <div class="mobile-panel">
+          <a class="mobile-link" href="product.html">Продукция</a>
+          <a class="mobile-link" href="{% if pageName == 'home' %}#services{% else %}index.html#services{% endif %}">Услуги</a>
+          <a class="mobile-link" href="projects.html">Проекты</a>
+          <a class="mobile-link" href="{% if pageName == 'home' %}#workflow{% else %}index.html#workflow{% endif %}">Как работаем</a>
+          <a class="mobile-link" href="about.html">О компании</a>
+          <a class="mobile-link" href="{% if pageName == 'home' %}#contacts{% else %}index.html#contacts{% endif %}">Контакты</a>
+
+          <div class="mobile-contact">
+            <span>Связаться с нами</span>
+            <a href="tel:+78352602802">+7 (8352) 602-802</a>
+            <a href="mailto:akvaekostok@yandex.ru">akvaekostok@yandex.ru</a>
+            <a class="btn-primary" href="{% if pageName == 'home' %}#request{% else %}index.html#request{% endif %}">Получить расчёт</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

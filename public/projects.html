@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Проекты — АкваЭкоСток</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="АкваЭкоСток — на главную">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <span class="brand-title">ООО «АкваЭкоСток»</span>
+        <span class="brand-subtitle">Производство и поставка очистных сооружений</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Основное меню">
+      <a class="nav-linkindex.html#services">Услуги</a>
+      <a class="nav-link is-active{% endif %}" href="projects.html">Проекты</a>
+      <a class="nav-link" href="{% if pageName == 'home' %}#workflow">Как работаем</a>
+      <a class="nav-linkindex.html#contacts">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="phone-chip" href="tel:+78352602802"><span class="phone-dot"></span>+7 (8352) 602-802</a>
+      <a class="btn-primary" href="index.html#request">Оставить заявку</a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-clip">
+      <div class="mobile-menu-inner">
+        <div class="mobile-panel">
+          <a class="mobile-link" href="product.html">Продукция</a>
+          <a class="mobile-link" href="index.html#services">Услуги</a>
+          <a class="mobile-link" href="projects.html">Проекты</a>
+          <a class="mobile-link" href="index.html#workflow">Как работаем</a>
+          <a class="mobile-link" href="about.html">О компании</a>
+          <a class="mobile-link" href="index.html#contacts">Контакты</a>
+
+          <div class="mobile-contact">
+            <span>Связаться с нами</span>
+            <a href="tel:+78352602802">+7 (8352) 602-802</a>
+            <a href="mailto:akvaekostok@yandex.ru">akvaekostok@yandex.ru</a>
+            <a class="btn-primary" href="index.html#request">Получить расчёт</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+    <section class="page-hero">
+      <div class="section-shell">
+        <div class="breadcrumbs"><a href="index.html">Главная</a><span>/</span><span>Проекты</span></div>
+        <div class="page-hero-inner">
+          <div>
+            <span class="section-kicker">Реализованные работы</span>
+            <h1>Фото с производства, доставки, монтажа и запуска оборудования</h1>
+            <p>Собрали реальные кадры с объектов и производственных этапов. Сейчас это общая галерея работ, без отдельных страниц по каждому проекту.</p>
+          </div>
+          <div class="hero-info-card">
+            <strong>Что показываем</strong>
+            <span>Производство, отгрузку, монтаж, установленное оборудование, автоматику и видео с объектов.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="gallery-section">
+      <div class="section-shell">
+        <div class="gallery-head">
+          <div>
+            <span class="section-kicker">Галерея</span>
+            <h2>Работы на разных этапах проекта</h2>
+          </div>
+          <p>Показываем не только готовый результат, но и процесс: производство, логистику, монтаж и подготовку оборудования к запуску.</p>
+        </div>
+
+        <div class="projects-masonry">
+          <a class="project-card project-card-large" href="#"><img src="assets/img/projects/photo_21_2026-05-21_17-21-54.jpg" alt="Монтаж оборудования на объекте"><div class="project-card-content"><span class="project-tag">Монтаж</span><h3>Поставка и монтаж оборудования на площадке</h3><p>Установка корпуса оборудования, подготовка площадки и подключение инженерных узлов.</p></div></a>
+          <a class="project-card project-card-wide" href="#"><img src="assets/img/projects/photo_6_2026-05-21_17-21-54.jpg" alt="Доставка оборудования"><div class="project-card-content"><span class="project-tag">Доставка</span><h3>Отгрузка оборудования на объект</h3><p>Логистика под габариты корпуса и условия площадки.</p></div></a>
+          <a class="project-card project-card-wide" href="#"><img src="assets/img/projects/photo_15_2026-05-21_17-21-54.jpg" alt="Производство оборудования"><div class="project-card-content"><span class="project-tag">Производство</span><h3>Корпуса и ёмкости в цехе</h3><p>Производственный этап перед комплектацией и поставкой.</p></div></a>
+          <a class="project-card project-card-small" href="#"><img src="assets/img/projects/photo_18_2026-05-21_17-21-54.jpg" alt="Монтаж корпуса"><div class="project-card-content"><span class="project-tag">Котлован</span><h3>Монтаж корпуса</h3><p>Установка и позиционирование оборудования.</p></div></a>
+          <a class="project-card project-card-small" href="#"><img src="assets/img/projects/photo_14_2026-05-21_17-21-54.jpg" alt="Внутреннее оснащение"><div class="project-card-content"><span class="project-tag">Комплектация</span><h3>Внутреннее оснащение</h3><p>Арматура, узлы подключения и технологическая часть.</p></div></a>
+          <a class="project-card project-card-small" href="#"><img src="assets/img/projects/photo_24_2026-05-21_17-21-54.jpg" alt="Шкафы управления"><div class="project-card-content"><span class="project-tag">Автоматика</span><h3>Шкафы управления</h3><p>Автоматизация оборудования и контроль работы систем.</p></div></a>
+          <a class="project-card project-card-half" href="#"><img src="assets/img/projects/photo_11_2026-05-21_17-21-54.jpg" alt="Погрузка оборудования"><div class="project-card-content"><span class="project-tag">Логистика</span><h3>Погрузка и подготовка к отправке</h3><p>Подготовка оборудования к транспортировке.</p></div></a>
+          <a class="project-card project-card-half" href="#"><img src="assets/img/projects/photo_20_2026-05-21_17-21-54.jpg" alt="Установленное оборудование"><div class="project-card-content"><span class="project-tag">Оборудование</span><h3>Установленное оборудование</h3><p>Готовые инженерные решения на площадке заказчика.</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="section-shell">
+        <div class="video-layout">
+          <div class="video-intro">
+            <span class="section-kicker">Видео</span>
+            <h2>Короткие видео с объектов</h2>
+            <p>Видео лучше вынести отдельным блоком, чтобы не перегружать галерею и сохранить быструю загрузку страницы.</p>
+          </div>
+
+          <div class="video-grid">
+            <a class="video-card" href="#"><span class="play-mark">▶</span><img src="assets/img/projects/photo_24_2026-05-21_17-21-54.jpg" alt="Видео автоматики"><div class="video-card-content"><h3>Работа автоматики</h3><p>Превью видео с объекта. Подключение видео можно сделать позже.</p></div></a>
+            <a class="video-card" href="#"><span class="play-mark">▶</span><img src="assets/img/projects/photo_18_2026-05-21_17-21-54.jpg" alt="Видео монтажа"><div class="video-card-content"><h3>Монтаж на площадке</h3><p>Видео-превью процесса установки оборудования.</p></div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="section-shell">
+        <div class="process-panel">
+          <div class="process-intro">
+            <span class="section-kicker">Что входит</span>
+            <h2>Работы по проекту</h2>
+            <p>Обычно проект включает несколько этапов: от подбора оборудования до поставки, монтажа и запуска.</p>
+          </div>
+          <div class="process-grid">
+            <div class="process-step"><span>01</span><strong>Подбор оборудования</strong></div>
+            <div class="process-step"><span>02</span><strong>Производство и комплектация</strong></div>
+            <div class="process-step"><span>03</span><strong>Доставка на объект</strong></div>
+            <div class="process-step"><span>04</span><strong>Монтаж или шефмонтаж</strong></div>
+            <div class="process-step"><span>05</span><strong>Пусконаладка</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="request">
+      <div class="section-shell">
+        <div class="cta-panel">
+          <div>
+            <h2>Нужно оборудование под ваш объект?</h2>
+            <p>Пришлите ТЗ, проект или фото площадки. Подскажем, какое решение подойдёт, и подготовим расчёт.</p>
+          </div>
+          <a class="btn-primary" href="index.html#request">Получить расчёт</a>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer" id="contacts">
+  <div class="footer-shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="index.html" aria-label="АкваЭкоСток — на главную">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span><strong>ООО «АкваЭкоСток»</strong><small>Производство и поставка очистных сооружений</small></span>
+        </a>
+        <p>Производим и поставляем оборудование для очистки сточных вод, перекачки, накопления и автоматизации инженерных систем.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Меню</h3>
+        <nav class="footer-links" aria-label="Меню в футере">
+          <a href="product.html">Продукция</a>
+          <a href="index.html#services">Услуги</a>
+          <a href="projects.html">Проекты</a>
+          <a href="index.html#workflow">Как работаем</a>
+          <a href="index.html#request">Заявка</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h3>Контакты</h3>
+        <div class="footer-contact-card">
+          <div class="footer-contact-item"><span>Телефон</span><a href="tel:+78352602802">+7 (8352) 602-802</a></div>
+          <div class="footer-contact-item"><span>Email</span><a href="mailto:akvaekostok@yandex.ru">akvaekostok@yandex.ru</a></div>
+          <div class="footer-contact-item"><span>Адрес</span><p>г. Чебоксары, ул. Хузангая, 14, офис 504</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 АкваЭкоСток. Все права защищены.</span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
