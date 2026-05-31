@@ -6128,3 +6128,134 @@
         font-size: 21px;
       }
     }
+
+    /* final mobile footer alignment */
+    @media (max-width: 700px) {
+      .site-footer {
+        padding: 30px 0 18px;
+        text-align: center;
+      }
+
+      .footer-shell {
+        width: min(100% - 28px, var(--container));
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        justify-items: center;
+      }
+
+      .footer-brand {
+        justify-items: center;
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+      }
+
+      .footer-logo {
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .footer-brand p,
+      .footer-top > .footer-column:nth-child(2) {
+        display: none;
+      }
+
+      .footer-logo .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .footer-logo strong {
+        font-size: 18px;
+      }
+
+      .footer-logo span:last-child small {
+        display: block;
+        max-width: 230px;
+        margin-top: 5px;
+        font-size: 10px;
+        line-height: 1.25;
+      }
+
+      .footer-column:nth-child(3) {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+      }
+
+      .footer-column:nth-child(3) h3 {
+        display: none;
+      }
+
+      .footer-contact-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        justify-items: center;
+        width: 100%;
+      }
+
+      .footer-contact-item {
+        display: grid;
+        gap: 6px;
+        align-content: center;
+        justify-items: center;
+        width: 100%;
+        min-height: 76px;
+        padding: 12px 10px;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 16px;
+        background: rgba(255,255,255,.06);
+      }
+
+      .footer-contact-item:nth-child(3) {
+        display: grid;
+        grid-column: 1 / -1;
+        min-height: auto;
+        padding: 13px 14px;
+      }
+
+      .footer-contact-card span {
+        font-size: 9px;
+      }
+
+      .footer-contact-card a {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.18;
+      }
+
+      .footer-contact-card p {
+        max-width: 280px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.32;
+      }
+
+      .footer-bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
+        margin-top: 16px;
+        padding-top: 14px;
+        text-align: center;
+        font-size: 11px;
+      }
+
+      .footer-bottom span,
+      .footer-bottom a {
+        display: block;
+        max-width: 290px;
+        line-height: 1.35;
+      }
+
+      .footer-bottom a {
+        padding-top: 2px;
+      }
+    }
