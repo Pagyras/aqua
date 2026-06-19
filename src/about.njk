@@ -1,0 +1,144 @@
+---
+layout: layouts/base.njk
+title: О компании — АкваЭкоСток
+pageName: about
+permalink: about.html
+---
+<main>
+    <section class="page-hero">
+      <div class="section-shell">
+        <div class="breadcrumbs"><a href="index.html">Главная</a><span>/</span><span>О компании</span></div>
+        <div class="page-hero-inner">
+          <div>
+            <span class="section-kicker">О компании</span>
+            <h1>АкваЭкоСток — инженерные решения для очистки и перекачки сточных вод</h1>
+            <p>Производим и поставляем оборудование для очистки сточных вод, перекачки, накопления и автоматизации инженерных систем.</p>
+          </div>
+          <div class="hero-info-card">
+            <strong>Работаем с объектами</strong>
+            <span>Промышленные, коммерческие, жилые и муниципальные объекты. Подбираем решение под реальные условия площадки.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-intro-section">
+      <div class="section-shell">
+        <div class="about-intro-layout">
+          <div class="about-text-card">
+            <span class="section-kicker">Кто мы</span>
+            <h2>Инженерная компания по очистке и перекачке сточных вод</h2>
+            <p>АкваЭкоСток производит и поставляет оборудование для очистки хозяйственно-бытовых, ливневых и производственных сточных вод, а также решения для перекачки, накопления и автоматизации инженерных систем.</p>
+            <p>Мы работаем с реальными условиями объекта: расходом, отметками труб, глубиной заложения, составом стоков, требованиями проекта и особенностями монтажа. Поэтому решение подбирается под задачу площадки, а не по шаблону.</p>
+          </div>
+
+          <div class="facts-grid">
+            <div class="fact-card"><strong>КНС</strong><span>канализационные насосные станции</span></div>
+            <div class="fact-card"><strong>ЛОС</strong><span>ливневые и бытовые очистные сооружения</span></div>
+            <div class="fact-card"><strong>Ёмкости</strong><span>колодцы, резервуары и накопители</span></div>
+            <div class="fact-card"><strong>АСУ</strong><span>шкафы управления и автоматика</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <div class="section-shell">
+        <div class="work-head">
+          <div>
+            <span class="section-kicker">Что делаем</span>
+            <h2>Сопровождаем проект от подбора до запуска</h2>
+          </div>
+          <p>Берём на себя полный цикл работ или отдельный этап проекта: от исходных данных и расчёта до поставки, монтажа, шефмонтажа и подготовки оборудования к запуску.</p>
+        </div>
+
+        <div class="work-grid">
+          <div class="work-card"><span>01</span><h3>Расчёт и подбор</h3><p>Разбираем ТЗ, проектные данные и условия площадки, чтобы подобрать подходящую схему оборудования.</p></div>
+          <div class="work-card"><span>02</span><h3>Производство</h3><p>Изготавливаем корпуса, ёмкости и технологические узлы под согласованные параметры объекта.</p></div>
+          <div class="work-card"><span>03</span><h3>Комплектация</h3><p>Формируем насосы, автоматику, арматуру, внутренние узлы и комплектующие перед поставкой.</p></div>
+          <div class="work-card"><span>04</span><h3>Доставка</h3><p>Готовим оборудование к транспортировке, организуем отгрузку и передачу на площадку заказчика.</p></div>
+          <div class="work-card"><span>05</span><h3>Монтаж</h3><p>Сопровождаем установку оборудования и контролируем ключевые этапы монтажных работ.</p></div>
+          <div class="work-card"><span>06</span><h3>Запуск</h3><p>Помогаем проверить систему, настроить режимы работы и подготовить оборудование к эксплуатации.</p></div>
+        </div>
+      </div>
+    </section>
+
+    
+<section class="photo-section">
+      <div class="section-shell">
+        <div class="photo-layout about-projects-layout">
+          <div class="photo-intro">
+            <span class="section-kicker">Реальные объекты</span>
+            <h2>Проекты и выполненные работы</h2>
+            <p>Карточки ведут на отдельные страницы объектов. Внутри: краткое описание выполненных работ, фотографии и видео с площадки.</p>
+          </div>
+
+          <div class="projects-masonry about-projects-grid">
+            {% for project in currentProjects %}
+              {% set cardClass = "project-card-small" %}
+              {% if loop.index == 1 %}
+                {% set cardClass = "project-card-large" %}
+              {% elif loop.index == 2 or loop.index == 3 %}
+                {% set cardClass = "project-card-wide" %}
+              {% endif %}
+              <a class="project-card {{ cardClass }}" href="{{ project.url }}">
+                <img src="{{ project.cover }}" alt="{{ project.title }}">
+                <div class="project-card-content">
+                  <span class="project-tag">{{ project.tag }}</span>
+                  <h3>{{ project.title }}</h3>
+                  <p>{{ project.short }}</p>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-section">
+      <div class="section-shell">
+        <div class="approach-panel">
+          <div class="approach-intro">
+            <span class="section-kicker">Подход</span>
+            <h2>Сначала исходные данные, потом решение</h2>
+            <p>Мы не подбираем оборудование вслепую. Для корректного расчёта важны расход, отметки труб, глубина заложения, состав стоков, условия монтажа и требования проекта.</p>
+          </div>
+          <div class="approach-grid">
+            <div class="approach-card"><span>01</span><strong>ТЗ и исходные данные</strong></div>
+            <div class="approach-card"><span>02</span><strong>Расчёт и подбор</strong></div>
+            <div class="approach-card"><span>03</span><strong>Комплектация под объект</strong></div>
+            <div class="approach-card"><span>04</span><strong>Сопровождение запуска</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts-section">
+      <div class="section-shell">
+        <div class="contacts-panel">
+          <div class="contacts-info">
+            <span class="section-kicker">География и контакты</span>
+            <h2>Работаем с поставками по России</h2>
+            <p>Офис компании находится в Чебоксарах. Оборудование подбирается и поставляется под задачи объектов в разных регионах.</p>
+          </div>
+          <div class="contacts-list">
+            <div class="contacts-item"><span>Телефон</span><a href="tel:+78352602802">+7 (8352) 602-802</a></div>
+            <div class="contacts-item"><span>Email</span><a href="mailto:akvaekostok@yandex.ru">akvaekostok@yandex.ru</a></div>
+            <div class="contacts-item"><span>Адрес</span><strong>г. Чебоксары, ул. Хузангая, 14, офис 504</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="request">
+      <div class="section-shell">
+        <div class="cta-panel">
+          <div>
+            <h2>Хотите подобрать оборудование под объект?</h2>
+            <p>Пришлите ТЗ, проект или краткое описание задачи. Подскажем, какие данные нужны, и подготовим расчёт.</p>
+          </div>
+          <a class="btn-primary" href="index.html#request">Получить расчёт</a>
+        </div>
+      </div>
+    </section>
+  </main>

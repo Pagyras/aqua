@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: currentProjects
+  size: 1
+  alias: project
+permalink: "{{ project.url }}"
+pageName: projects
+title: "{{ project.title }} — АкваЭкоСток"
+---
+<main>
+  <section class="project-detail-hero">
+    <div class="section-shell">
+      <div class="breadcrumbs"><a href="index.html">Главная</a><span>/</span><a href="projects.html">Проекты</a><span>/</span><span>{{ project.title }}</span></div>
+      <div class="project-detail-hero-grid">
+        <div>
+          <span class="section-kicker">Проект</span>
+          <h1>{{ project.title }}</h1>
+          <p>{{ project.intro }}</p>
+        </div>
+        <img src="{{ project.cover }}" alt="{{ project.title }}">
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail-section">
+    <div class="section-shell">
+      <div class="project-detail-layout">
+        <article class="project-detail-content">
+          <a class="project-back-link" href="projects.html">Назад к проектам</a>
+          <div class="project-text-block project-text-block-wide">
+            <h2>Задача проекта</h2>
+            <p>{{ project.task }}</p>
+          </div>
+          <div class="project-text-block">
+            <h2>Что было выполнено</h2>
+            <ul>
+              {% for item in project.result %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="project-text-block">
+            <h2>Результат</h2>
+            <p>{{ project.outcome }}</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="project-detail-gallery">
+        {% for image in project.images %}
+          <img src="{{ image }}" alt="{{ project.title }} — фото {{ loop.index }}">
+        {% endfor %}
+      </div>
+
+      {% if project.videos.length %}
+        <div class="project-detail-video-gallery" aria-label="Видео проекта">
+          {% for video in project.videos %}
+            <video src="{{ video }}" controls preload="metadata"></video>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+</main>

@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+title: Проекты — АкваЭкоСток
+pageName: projects
+permalink: projects.html
+---
+<main>
+  <section class="page-hero">
+    <div class="section-shell">
+      <div class="breadcrumbs"><a href="index.html">Главная</a><span>/</span><span>Проекты</span></div>
+      <div class="page-hero-inner">
+        <div>
+          <span class="section-kicker">Реальные объекты</span>
+          <h1>Проекты с поставкой оборудования для очистки, накопления и перекачки стоков</h1>
+          <p>В этом разделе собраны реальные объекты, где оборудование проходило подготовку, комплектацию, отгрузку или передачу на монтаж. Внутри каждой карточки есть описание задачи, выполненных работ и материалы с площадки.</p>
+        </div>
+        <div class="hero-info-card">
+          <strong>Что внутри проекта</strong>
+          <span>Кратко показываем задачу объекта, состав работ, результат поставки и фото или видео с производства, отгрузки и площадки заказчика.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="section-shell">
+      <div class="gallery-head">
+        <div>
+          <span class="section-kicker">Галерея проектов</span>
+          <h2>Поставленные решения и выполненные этапы работ</h2>
+        </div>
+        <p>Проекты отличаются по задачам: где-то требуется пожарный запас воды, где-то очистка ливневых или бытовых стоков, а где-то важна аккуратная отгрузка крупногабаритного корпуса. Все карточки ведут на отдельные страницы с подробностями.</p>
+      </div>
+
+      <div class="projects-masonry">
+        {% for project in currentProjects %}
+          {% set cardClass = "project-card-small" %}
+          {% if loop.index == 1 %}
+            {% set cardClass = "project-card-large" %}
+          {% elif loop.index == 2 or loop.index == 3 %}
+            {% set cardClass = "project-card-wide" %}
+          {% endif %}
+          <a class="project-card {{ cardClass }}" href="{{ project.url }}">
+            <img src="{{ project.cover }}" alt="{{ project.title }}">
+            <div class="project-card-content">
+              <span class="project-tag">{{ project.tag }}</span>
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.short }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="section-shell">
+      <div class="process-panel">
+        <div class="process-intro">
+          <span class="section-kicker">Что входит</span>
+          <h2>Как обычно строится работа по объекту</h2>
+          <p>Набор этапов зависит от задачи, но логика всегда одна: сначала уточняем исходные данные, затем готовим оборудование и передаем его на объект в понятной комплектации.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><span>01</span><strong>Разбор задачи и исходных данных</strong></div>
+          <div class="process-step"><span>02</span><strong>Подбор схемы и состава оборудования</strong></div>
+          <div class="process-step"><span>03</span><strong>Производство и комплектация узлов</strong></div>
+          <div class="process-step"><span>04</span><strong>Подготовка к отгрузке и доставка</strong></div>
+          <div class="process-step"><span>05</span><strong>Монтаж, шефмонтаж или подготовка к запуску</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="request">
+    <div class="section-shell">
+      <div class="cta-panel">
+        <div>
+          <h2>Нужно подобрать оборудование под похожий объект?</h2>
+          <p>Пришлите ТЗ, проектные данные или описание площадки. Подскажем, какое решение подойдет по расходу, условиям монтажа и требованиям эксплуатации.</p>
+        </div>
+        <a class="btn-primary" href="index.html#request">Получить расчет</a>
+      </div>
+    </div>
+  </section>
+</main>
