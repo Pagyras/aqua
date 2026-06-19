@@ -8616,3 +8616,16 @@
         border-radius: 16px;
       }
     }
+
+    /* final home projects bottom row */
+    .projects-gallery .project-tile:nth-child(4),
+    .projects-gallery .project-tile:nth-child(5) {
+      grid-column: span 6;
+    }
+
+    @media (max-width: 620px) {
+      .projects-gallery .project-tile:nth-child(4),
+      .projects-gallery .project-tile:nth-child(5) {
+        grid-column: auto;
+      }
+    }
