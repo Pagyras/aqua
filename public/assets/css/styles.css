@@ -8596,3 +8596,23 @@
         font-size: 24px;
       }
     }
+
+    /* final project media order */
+    .project-detail-gallery video {
+      flex: 0 0 auto;
+      width: min(520px, 82vw);
+      height: 320px;
+      border: 1px solid rgba(122,153,181,.18);
+      border-radius: 24px;
+      background: #061f32;
+      object-fit: cover;
+      box-shadow: 0 18px 42px rgba(8,24,38,.08);
+    }
+
+    @media (max-width: 700px) {
+      .project-detail-gallery video {
+        width: 78vw;
+        height: 190px;
+        border-radius: 16px;
+      }
+    }

@@ -48,18 +48,15 @@ title: "{{ project.title }} — АкваЭкоСток"
       </div>
 
       <div class="project-detail-gallery">
+        {% if project.videos.length %}
+          {% for video in project.videos %}
+            <video src="{{ video }}" controls preload="metadata"></video>
+          {% endfor %}
+        {% endif %}
         {% for image in project.images %}
           <img src="{{ image }}" alt="{{ project.title }} — фото {{ loop.index }}">
         {% endfor %}
       </div>
-
-      {% if project.videos.length %}
-        <div class="project-detail-video-gallery" aria-label="Видео проекта">
-          {% for video in project.videos %}
-            <video src="{{ video }}" controls preload="metadata"></video>
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
   </section>
 </main>
