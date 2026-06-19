@@ -8461,3 +8461,138 @@
         padding-bottom: 18px;
       }
     }
+
+    /* final about article layout */
+    .about-article-hero .page-hero-inner {
+      grid-template-columns: minmax(0, 900px);
+    }
+
+    .about-article-section {
+      padding: 54px 0 62px;
+      background: linear-gradient(180deg, #eef5fa 0%, #f8fbfd 48%, #fff 100%);
+    }
+
+    .about-article-panel {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 54px 58px;
+      border: 1px solid rgba(122,153,181,.18);
+      border-radius: 32px;
+      background: #fff;
+      box-shadow: 0 24px 70px rgba(8,24,38,.08);
+    }
+
+    .about-article-head {
+      max-width: 820px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(122,153,181,.18);
+    }
+
+    .about-article-head h2 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(38px, 3.4vw, 56px);
+      font-weight: 850;
+      line-height: 1;
+      letter-spacing: -.058em;
+      text-wrap: balance;
+    }
+
+    .about-article-content {
+      max-width: 860px;
+      padding-top: 30px;
+    }
+
+    .about-article-content p {
+      margin: 18px 0 0;
+      color: var(--text-soft);
+      font-size: 17px;
+      font-weight: 560;
+      line-height: 1.72;
+    }
+
+    .about-article-content .about-article-lead {
+      margin-top: 0;
+      color: var(--text);
+      font-size: 19px;
+      font-weight: 720;
+      line-height: 1.62;
+    }
+
+    .about-article-content h3 {
+      margin: 42px 0 0;
+      color: var(--text);
+      font-size: clamp(26px, 2.1vw, 34px);
+      font-weight: 850;
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+
+    .about-article-content ul {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .about-article-content li {
+      position: relative;
+      padding-left: 24px;
+      color: var(--text-soft);
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    .about-article-content li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(0,107,182,.08);
+    }
+
+    @media (max-width: 760px) {
+      .about-article-section {
+        padding: 30px 0 38px;
+      }
+
+      .about-article-panel {
+        padding: 26px 18px;
+        border-radius: 24px;
+      }
+
+      .about-article-head {
+        padding-bottom: 18px;
+      }
+
+      .about-article-head h2 {
+        font-size: 30px;
+        line-height: 1.04;
+      }
+
+      .about-article-content {
+        padding-top: 20px;
+      }
+
+      .about-article-content p,
+      .about-article-content li {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .about-article-content .about-article-lead {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .about-article-content h3 {
+        margin-top: 30px;
+        font-size: 24px;
+      }
+    }
