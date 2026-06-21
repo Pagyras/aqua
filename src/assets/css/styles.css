@@ -8620,3 +8620,147 @@
         padding: 11px 14px 13px;
       }
     }
+
+    /* final responsive hardening */
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    @supports (overflow-x: clip) {
+      html,
+      body {
+        overflow-x: clip;
+      }
+    }
+
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1040px) {
+      .page-hero-inner,
+      .project-detail-hero-grid,
+      .catalog-row,
+      .catalog-row#kns,
+      .about-article-hero .page-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-row-media,
+      .catalog-row#kns .catalog-row-media {
+        border-radius: 0 0 28px 28px;
+      }
+
+      .project-detail-gallery,
+      .project-detail-video-gallery {
+        max-width: calc(100vw - 28px);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .section-shell,
+      .header-inner,
+      .footer-shell,
+      .mobile-menu-inner {
+        width: min(100% - 24px, var(--container));
+      }
+
+      .page-hero-inner,
+      .request-layout,
+      .services-layout,
+      .process-panel,
+      .about-clean-projects-head,
+      .about-clean-split,
+      .about-clean-columns,
+      .about-clean-products,
+      .about-article-hero .page-hero-inner {
+        grid-template-columns: 1fr !important;
+      }
+
+      .page-hero h1,
+      .project-detail-hero h1,
+      .about-article-head h2,
+      .about-clean-block h2,
+      .about-clean-projects-head h2,
+      .gallery-head h2,
+      .projects-head-text h2 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .request-direct a,
+      .footer-contact-card a,
+      .contacts-item a,
+      .operator-item a {
+        overflow-wrap: anywhere;
+      }
+
+      .catalog-row-media,
+      .catalog-row#kns .catalog-row-media {
+        min-height: 210px;
+      }
+
+      .project-detail-gallery {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .project-detail-gallery img,
+      .project-detail-gallery video,
+      .project-detail-video-gallery video {
+        width: min(82vw, 340px);
+        flex-basis: min(82vw, 340px);
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero-rail,
+      .workflow-track,
+      .projects-gallery,
+      .projects-masonry,
+      .about-projects-grid,
+      .footer-contact-card {
+        grid-template-columns: 1fr !important;
+      }
+
+      .project-tile,
+      .project-tile-large,
+      .project-tile-side,
+      .project-tile-small,
+      .projects-gallery .project-tile:nth-child(4),
+      .projects-gallery .project-tile:nth-child(5),
+      .project-card,
+      .project-card-large,
+      .project-card-wide,
+      .project-card-small,
+      .project-card-half,
+      .about-projects-grid .project-card,
+      .about-projects-grid .project-card-large,
+      .about-projects-grid .project-card-wide,
+      .about-projects-grid .project-card-small,
+      .about-projects-grid .project-card-half {
+        grid-column: 1 / -1 !important;
+      }
+
+      .workflow-step {
+        min-height: auto;
+      }
+
+      .footer-contact-item,
+      .footer-contact-item:nth-child(3) {
+        grid-column: 1 / -1;
+        min-height: auto;
+      }
+
+      .product-media {
+        aspect-ratio: 1.55 / 1;
+      }
+
+      .catalog-row-media,
+      .catalog-row#kns .catalog-row-media {
+        min-height: 190px;
+      }
+    }
