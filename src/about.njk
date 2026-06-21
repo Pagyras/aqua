@@ -102,6 +102,8 @@ permalink: about.html
               {% set cardClass = "project-card-large" %}
             {% elif loop.index == 2 or loop.index == 3 %}
               {% set cardClass = "project-card-wide" %}
+            {% elif loop.index == 4 or loop.index == 5 %}
+              {% set cardClass = "project-card-half" %}
             {% endif %}
             <a class="project-card {{ cardClass }}" href="{{ project.url }}">
               <img src="{{ project.cover }}" alt="{{ project.title }}">
