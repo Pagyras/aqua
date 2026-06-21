@@ -1,11 +1,12 @@
-# АкваЭкоСток — сайт на Eleventy/Nunjucks
+# АкваЭкоСток — сайт на Eleventy
 
-Проект перепакован из отдельных больших HTML-файлов в нормальную структуру.
+Статический сайт компании на Eleventy/Nunjucks. Исходники лежат в `src`, собранная версия публикуется в `public`.
 
-## Что внутри
+## Структура
 
 ```text
 src/
+├── _data/currentProjects.js          # данные проектов
 ├── _includes/
 │   ├── layouts/base.njk
 │   └── partials/
@@ -15,94 +16,52 @@ src/
 ├── assets/
 │   ├── css/styles.css
 │   ├── js/main.js
+│   ├── docs/                         # опросные листы для скачивания
 │   ├── img/
-│   │   ├── projects/
-│   │   ├── products/
-│   │   ├── hero/
-│   │   └── placeholders/
-│   └── docs/
-├── index.njk
-├── product.njk
-├── projects.njk
+│   │   ├── logo.png
+│   │   ├── products/                 # изображения продукции
+│   │   └── projects/current/         # фото проектов
+│   └── video/projects/current/       # видео проектов
 ├── about.njk
+├── index.njk
 ├── privacy.njk
+├── product.njk
+├── project-detail.njk
+├── projects.njk
 └── service.njk
 ```
 
-## Главное изменение
-
-Хедер и футер теперь лежат в одном месте:
-
-- `src/_includes/partials/header.njk`
-- `src/_includes/partials/footer.njk`
-
-Теперь не нужно менять хедер и футер в каждой странице отдельно.
-
-## Как запустить
+## Запуск локально
 
 ```bash
 npm install
-npm run start
+npm run start -- --port 8080
 ```
 
-После этого сайт откроется на локальном сервере Eleventy.
+После запуска сайт доступен по адресу `http://localhost:8080/`.
 
-## Как собрать финальную версию
+## Сборка
 
 ```bash
 npm run build
 ```
 
-Готовый сайт будет в папке:
+Готовые файлы появляются в папке `public/`.
 
-```text
-public/
-```
+## Контент
 
-Я также положил уже собранную папку `public/`, чтобы можно было сразу открыть `public/index.html` без сборки.
+- Продукция на главной и странице каталога редактируется в `src/index.njk` и `src/product.njk`.
+- Проекты, тексты, фото и видео редактируются в `src/_data/currentProjects.js`.
+- Опросные листы лежат в `src/assets/docs/` и подключены на странице `product.html`.
+- Логотип подключен в `src/_includes/partials/header.njk` и `src/_includes/partials/footer.njk`.
 
-## Что уже поправлено
+## Перед публикацией
 
-- На главной ссылка `Услуги` ведёт на блок услуг: `#services`.
-- На остальных страницах ссылка `Услуги` ведёт на `index.html#services`.
-- Политика конфиденциальности убрана из колонки контактов в футере.
-- Политика осталась только в нижней строке футера справа.
-- JS бургер-меню вынесен в `assets/js/main.js`.
-- Стили вынесены из HTML в `assets/css/styles.css`.
+1. Выполнить `npm run build`.
+2. Проверить `public/index.html`, `public/product.html`, `public/projects.html`, `public/about.html` и страницы отдельных проектов.
+3. Проверить скачивание опросных листов на странице продукции.
+4. Проверить мобильное меню и отображение карточек продукции/проектов.
 
-## Фото и заглушки
+## Важно
 
-- Фото проектов перенесены в `assets/img/projects/`.
-- Внешние фото продукции и hero пока оставлены как есть, чтобы сайт выглядел сразу нормально.
-- Для будущей замены есть папки:
-  - `assets/img/products/`
-  - `assets/img/hero/`
-  - `assets/img/placeholders/`
-- Заглушка: `assets/img/placeholders/placeholder.svg`.
-
-## Опросные листы
-
-Папка для документов:
-
-```text
-src/assets/docs/
-```
-
-Когда появятся PDF/DOCX/XLSX, положите их туда и замените ссылки у кнопок `Скачать опросный лист`.
-
-## Что можно улучшить дальше
-
-Сейчас все стили собраны в один файл `styles.css`, чтобы быстро убрать CSS из HTML. Следующий шаг — разделить его на:
-
-```text
-base.css
-header.css
-footer.css
-home.css
-product.css
-projects.css
-about.css
-privacy.css
-```
-
-Но даже в текущем виде код уже намного удобнее: страницы стали короткими, а хедер и футер больше не дублируются.
+Форма заявки сейчас статическая: у нее нет подключенного backend или внешнего обработчика. Для полноценного запуска нужно подключить отправку заявок на почту, CRM или form-сервис.
