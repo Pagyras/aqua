@@ -18,3 +18,14 @@ mobileLinks.forEach((link) => {
     burger.setAttribute('aria-expanded', 'false');
   });
 });
+
+const requestForm = document.querySelector('.request-form');
+
+if (requestForm) {
+  requestForm.addEventListener('submit', () => {
+    const nextInput = requestForm.querySelector('input[name="_next"]');
+    if (nextInput) {
+      nextInput.value = new URL('thanks.html', window.location.href).href;
+    }
+  });
+}
