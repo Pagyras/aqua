@@ -8764,3 +8764,45 @@
         min-height: 190px;
       }
     }
+
+    /* workflow cards without icons */
+    .workflow-icon {
+      display: none !important;
+    }
+
+    .workflow-step {
+      grid-template-columns: auto minmax(0, 1fr);
+      grid-template-areas:
+        "number title"
+        "number text";
+      column-gap: 16px;
+      row-gap: 4px;
+      align-content: center;
+      align-items: center;
+    }
+
+    .workflow-number {
+      align-self: center;
+      margin-right: 0;
+    }
+
+    .workflow-step h3,
+    .workflow-step p {
+      min-width: 0;
+    }
+
+    .workflow-step h3 {
+      align-self: end;
+    }
+
+    .workflow-step p {
+      align-self: start;
+    }
+
+    @media (max-width: 700px) {
+      .workflow-step {
+        min-height: 92px;
+        padding: 16px;
+        column-gap: 13px;
+      }
+    }
