@@ -71,13 +71,7 @@ module.exports = [
     images: [
       "assets/img/projects/current/dk-shipping-01.jpg"
     ],
-    videos: [
-      "assets/video/projects/current/dk-shipping-01.mp4",
-      "assets/video/projects/current/dk-shipping-02.mp4",
-      "assets/video/projects/current/dk-shipping-03.mp4",
-      "assets/video/projects/current/dk-shipping-04.mp4",
-      "assets/video/projects/current/dk-shipping-05.mp4"
-    ]
+    videos: []
   },
   {
     tag: "Очистные",
